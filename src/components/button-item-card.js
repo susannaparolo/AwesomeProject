@@ -17,8 +17,9 @@ const styles = StyleSheet.create({
         elevation: 3,
         backgroundColor: '#fbdd74',
         borderRadius: 4,
-        marginHorizontal: 70,
+        marginHorizontal: 80,
         marginTop: 15,
+        marginBottom: 20
     },
     textStyle: {
         fontSize: 12,

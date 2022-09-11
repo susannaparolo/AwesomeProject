@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet } from 'react-native';
 import {Card, Title , Paragraph } from 'react-native-paper';
-import CardButton from "./card-button";
+import CardButton from "./button-item-card";
 
 
 const CreateCard = (props) => {
