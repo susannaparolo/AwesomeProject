@@ -1,5 +1,5 @@
 import Home from "../screens/Home";
-import LearnMore from "../screens/LearnMore";
+import LearnMore from "../screens/Opportunities";
 import Courses from "../screens/Courses";
 import FAQs from "../screens/FAQs";
 import { NavigationContainer } from '@react-navigation/native';

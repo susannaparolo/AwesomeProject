@@ -28,7 +28,7 @@ export default function Courses(props) {
            <CreateCard
             title={'FULL-STACK DEVELOPER CAREER PATHWAY'}
             description={'The skills you will learn in our Full-Stack CFGdegree will allow you to explore all sorts of roles as a developer as you’ll learn both front-end and back-end skills, and how to connect the two. You’ll be able to take on roles like full-stack developer (obvs!), front-end developer, back-end developer, mobile app developer and loads more!'}
-           />
+            />
           </ScrollView>
         </SafeAreaView>
       );

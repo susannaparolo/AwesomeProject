@@ -14,8 +14,8 @@ export default function Home() {
       <Header1 style={styles.header1} header1Text={'Hello World!'}/>
       <Header2 style={styles.header2} header2Text={'CFG Masters'}/>
       <Header3 style={styles.header3} header3Text={'Summer 2022'}/>
-      <MyButtonMain buttonText='Learn More' />
-      <MyButtonSecondary buttonText='Another Button' />
+      <MyButtonMain buttonText='COURSES' />
+      <MyButtonSecondary buttonText='OPPORTUNITIES' />
       
       <StatusBar style="auto" />
     </SafeAreaView>
