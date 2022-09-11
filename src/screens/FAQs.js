@@ -7,10 +7,10 @@ import MainText from '../components/main-text.js';
 export default function FAQs() {
   return (
     <SafeAreaView style={styles.container}>
-      <Header2 header2Text={'GET IN TOUCH'}/>
+      <Header2 header2Text={'FREQUENTLY ASKED Qs'}/>
       <MainText mainText={'If you have a question about our classes or CFGdegree, check the below links for our FAQs, where we have covered our most ‘in demand’ questions from the community'} />
-      <MainText mainText={'QUESTIONS ABOUT OUR CLASSES OR CFGDEGREE?'}/>
-      <MyButtonMain buttonText='Class FAQs'/>
+      <MyButtonMain buttonText='CLASS FAQs'/>
+      
       <StatusBar style="auto" />
     </SafeAreaView>
   );

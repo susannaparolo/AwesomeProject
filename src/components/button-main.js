@@ -17,19 +17,18 @@ const styles = StyleSheet.create({
     buttonStyle: {
         alignItems: 'center',
         justifyContent: 'center',
-        paddingVertical: 12,
-        paddingHorizontal: 32,
         borderRadius: 4,
         elevation: 3,
         backgroundColor: '#ff6e6c',
-        borderWidth: 2,
-        borderRadius: 4,
         marginBottom: 20,
-        marginTop: 20,
+        marginTop: 40,
+        height: 45,
+        width: 170
     },
     textStyle: {
-        fontSize: 20,
-        color: 'black'
+        fontSize: 15,
+        color: 'black',
+        fontWeight: 'bold'
     },
 })
 
