@@ -1,50 +1,30 @@
-import React from "react";
-import { StyleSheet } from 'react-native';
-import {Card, Title , Paragraph } from 'react-native-paper';
-import CardButton from "./card-button";
+import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 
+export default function CardButton(props) { 
 
-const CreateCard = (props) => {
-	
-	return(
-		
-		<Card style={styles.container}>
-            <Card.Content style={styles.cardTitle}>
-                <Title style={styles.titleStyle}>{props.title}</Title>
-            </Card.Content>
-            
-            <Card.Content>
-                <Paragraph style={styles.paragraphStyle}>{props.description}</Paragraph>
-            </Card.Content>
-            <CardButton buttonText='APPLY NOW'/>
-
-        </Card>
-		
-	)
+    return (
+            <TouchableOpacity style={styles.buttonStyle}>
+                <Text style={styles.textStyle}>{props.buttonText}</Text>
+            </TouchableOpacity>
+    );
 }
 
-
 const styles = StyleSheet.create({
-	container: {
-		alignContent:'center',
-		height: 'auto',
-        width: 280,
-        borderRadius: 5,
-        marginHorizontal: 10,
-        marginVertical: 6,
-        backgroundColor: '#e2daeb',
-	},
-    titleStyle: {
-        color: '#1f1135',
-        fontWeight: 'bold',
-        fontSize: 13,
-        marginVertical: -5,
-        lineHeight: 20,
-        marginBottom: 10
+    buttonStyle: {
+        alignItems: 'center',
+        padding: 10,
+        borderRadius: 4,
+        elevation: 3,
+        backgroundColor: '#fbdd74',
+        borderRadius: 4,
+        marginHorizontal: 70,
+        marginTop: 15,
     },
-    paragraphStyle: {
-        fontSize: 12
-    }
+    textStyle: {
+        fontSize: 12,
+        color: 'black',
+        fontWeight: 'bold'
+    },
 })
 
-export default CreateCard;
+
