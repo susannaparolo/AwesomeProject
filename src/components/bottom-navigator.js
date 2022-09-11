@@ -1,6 +1,6 @@
 import Home from "../screens/Home";
 import LearnMore from "../screens/LearnMore";
-import AboutUs from "../screens/AboutUs";
+import Courses from "../screens/Courses";
 import FAQs from "../screens/FAQs";
 import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
@@ -23,7 +23,7 @@ export default function BottomNavigator() {
           }} />
         <Tab.Screen 
           name="Courses" 
-          component={AboutUs}
+          component={Courses}
           options={{
             tabBarIcon: () => (<Entypo name="graduation-cap"size={20} color="white" />) 
           }}/>
