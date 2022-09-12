@@ -15,13 +15,14 @@ export default function LearnMore() {
   return (
     <SafeAreaView style={styles.container}>
       <Header2 header2Text={'EXPLORE YOUR TECH CAREER PATHWAY'} />
-      <MainText mainText={'A career in tech has many, many different faces and, with tech being integrated across loads of different areas, there are almost endless career path possibilities. Below, you can explore some career pathways, tech job roles, find out how tech works across different industries, and discover some real-life examples of women killing it in their tech careers.'}/>
+      <Text style={styles.subtitle}>A career in tech has many, many different faces and, with tech being integrated across loads of different areas, there are almost endless career path possibilities. Below, you can explore some career pathways, tech job roles, find out how tech works across different industries, and discover some real-life examples of women killing it in their tech careers.
+      </Text>
       <TouchableOpacity style={styles.buttonStyle} onPress={() => setSponsors([...sponsors, { type: "Selfridges"}])}>
          <Text style={styles.buttonTextStyle}>SHOW MORE SPONSORS</Text>
       </TouchableOpacity>
       <ScrollView style={styles.scrollview}>
       {sponsors.map((sponsor) => (
-        <Header2 header2Text={sponsor.type}/>))}
+        <Text style={styles.text}>{sponsor.type}</Text> ))}
       </ScrollView>
  
 
@@ -40,11 +41,16 @@ const styles = StyleSheet.create({
   },
   text: {
     color: '#1f1135',
-    fontSize: 10,
+    fontSize: 18,
+    marginTop: 10,
+    textAlign: 'center',
+    fontWeight: 'bold'
   },
   scrollview: {
-    marginVertical: 20,
-    width: 250
+    marginTop: 20,
+    width: '100%',
+    backgroundColor: '#e2daeb',
+    borderRadius: 4
   },
   buttonStyle: {
     alignItems: 'center',
@@ -52,12 +58,17 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     elevation: 3,
     backgroundColor: '#ff6e6c',
-    height: 45,
-    width: 200
+    marginTop: 10,
+    padding: 10
   },
   buttonTextStyle: {
-      fontSize: 15,
-      color: 'black',
+      fontSize: 10,
+      color: '#1f1135',
       fontWeight: 'bold'
   },
+  subtitle: {
+    color: '#1f1135',
+    fontSize: 10,
+    padding: 20
+  }
 });
