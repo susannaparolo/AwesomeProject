@@ -4,7 +4,7 @@ import Header2 from '../components/header2.js';
 import MainText from '../components/main-text.js';
 import React, { useState } from 'react';
 
-export default function LearnMore() {
+export default function Careers() {
   const [sponsors, setSponsors] = useState([
     { type: "Barclays" },
     { type: "Natwest" },

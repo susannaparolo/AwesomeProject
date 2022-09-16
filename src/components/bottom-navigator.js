@@ -1,7 +1,8 @@
 import Home from "../screens/Home";
-import LearnMore from "../screens/Opportunities";
+import Careers from "../screens/Careers";
 import Courses from "../screens/Courses";
 import FAQs from "../screens/FAQs";
+import Account from "../screens/Account";
 import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { Entypo } from "@expo/vector-icons"
@@ -28,8 +29,8 @@ export default function BottomNavigator() {
             tabBarIcon: () => (<Entypo name="graduation-cap"size={20} color="white" />) 
           }}/>
         <Tab.Screen 
-          name="Opportunities" 
-          component={LearnMore} 
+          name="Careers" 
+          component={Careers} 
           options={{
             tabBarIcon: () => (<Entypo name="briefcase"size={20} color="white" />)
           }}/>
@@ -38,6 +39,12 @@ export default function BottomNavigator() {
           component={FAQs} 
           options={{
             tabBarIcon: () => (<Entypo name="help"size={20} color="white" />)
+          }}/>
+        <Tab.Screen 
+          name="Account" 
+          component={Account} 
+          options={{
+            tabBarIcon: () => (<Entypo name="user"size={20} color="white" />)
           }}/>
       </Tab.Navigator>
     </NavigationContainer>
