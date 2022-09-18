@@ -1,35 +1,29 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, SafeAreaView, View, Text, TouchableOpacity } from 'react-native';
 import { Input } from '@rneui/themed';
-import MyButtonMain from '../components/button-main.js';
 import Header2 from '../components/header2.js';
-// import { useDispatch, useSelector, } from 'react-redux';
-// import { useState } from 'react';
-
-
+import { useDispatch, useSelector } from 'react-redux';
+import { useState } from 'react';
 
 
 export default function Account() {
 
-  // const [formData, setFormData] = useState({
-  //   email: "",
-  //   password: ""
-  // })
+  const dispatch = useDispatch()
+  const [submitted, setSubmitted] = useState(false);
 
-  // const dispatch = useDispatch()
-
-  // function addUser(user){
-  //     const action = {
-  //       type: 'ADD_USER',
-  //       payload: user
-  //     }
-  //   dispatch(action)
-  // }
-
-  // function log() {
-  //   // e.preventDefault()
-  //   console.log(formData)
-  // }
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if(email && password) {
+    setSubmitted(true);
+  }
+  
+  function addUser(user){
+      const action = {
+        type: 'ADD_USER',
+        payload: user
+      }
+    dispatch(action)
+  }
 
   return (
     <SafeAreaView style={styles.container}>
@@ -38,13 +32,16 @@ export default function Account() {
         <View style={styles.view}>
             <Text style={styles.text}>EMAIL ADDRESS</Text>
             <Input placeholder='example@email.com'/>
+            {submitted && !email ? <Text style={styles.errortext}> Please enter email address</Text> : null}
             <Text style={styles.text}>PASSWORD</Text>
-            <Input placeholder="Password"/>
+            <Input placeholder="Password" secureTextEntry={true}/>
+            {submitted && !password ? <Text style={styles.errortext}> Please enter password</Text> : null}
         </View>
-        <MyButtonMain buttonText={'LOG IN'}/>
-        <Text style={styles.text}>DON'T HAVE AN ACCOUNT YET?</Text>
-        <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>SIGN UP</Text>
+
+        <TouchableOpacity 
+            style={styles.button}
+            onPress={addUser} >
+              <Text style={styles.buttonText}>LOG IN</Text>
         </TouchableOpacity>
       <StatusBar style="auto" />
     </SafeAreaView>
@@ -81,4 +78,4 @@ const styles = StyleSheet.create({
   }
 });
 
-
+}

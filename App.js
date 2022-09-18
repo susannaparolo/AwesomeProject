@@ -1,31 +1,34 @@
 import { StyleSheet } from "react-native";
 import BottomNavigator from "./src/components/bottom-navigator";
-// import { createStore } from "redux";
-// import { Provider } from 'react-redux';
+import { createStore } from "redux";
+import { Provider } from 'react-redux';
 
 
 export default function App() {
 
-  // const initialState = {username: "No user is set yet"}
+  const initialState = {
+    email: "No email is set yet",
+    password: ""
+  }
 
-  // function userReducer(state, action){
-  //   switch (action.type) {
-  //     case "ADD_USER":
-  //       console.log(action.payload)
-  //       return state.username = {...state, username:action.payload}
-  //     case "REMOVE_USER":
-  //       return state
-  //     default:
-  //       return state
-  //   }
-  // }
+  function userReducer(state, action){
+    switch (action.type) {
+      case "ADD_USER":
+        console.log(action.payload)
+        return state.email = {...state, email:action.payload}
+      case "LOGOUT":
+        return state
+      default:
+        return state
+    }
+  }
 
-  // const store = createStore(userReducer,initialState);
+  const store = createStore(userReducer,initialState);
 
   return (
-      // <Provider store={store}>
+      <Provider store={store}>
         <BottomNavigator/>
-      {/* </Provider> */}
+      </Provider>
     );
 }
 
