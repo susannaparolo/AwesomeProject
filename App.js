@@ -1,14 +1,17 @@
 import { StyleSheet } from "react-native";
 import BottomNavigator from "./src/components/bottom-navigator";
+// import { createStore } from "redux";
+// import { Provider } from 'react-redux';
 
 
 export default function App() {
 
   // const initialState = {username: "No user is set yet"}
 
-  // function usersReducer(state, action){
+  // function userReducer(state, action){
   //   switch (action.type) {
   //     case "ADD_USER":
+  //       console.log(action.payload)
   //       return state.username = {...state, username:action.payload}
   //     case "REMOVE_USER":
   //       return state
@@ -17,10 +20,12 @@ export default function App() {
   //   }
   // }
 
-  // const store = createStore(usersReducer,initialState);
+  // const store = createStore(userReducer,initialState);
 
   return (
-      <BottomNavigator/>
+      // <Provider store={store}>
+        <BottomNavigator/>
+      {/* </Provider> */}
     );
 }
 
