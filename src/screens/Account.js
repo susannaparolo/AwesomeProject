@@ -3,10 +3,34 @@ import { StyleSheet, SafeAreaView, View, Text, TouchableOpacity } from 'react-na
 import { Input } from '@rneui/themed';
 import MyButtonMain from '../components/button-main.js';
 import Header2 from '../components/header2.js';
-import MainText from '../components/main-text.js';
+// import { useDispatch, useSelector, } from 'react-redux';
+// import { useState } from 'react';
+
+
 
 
 export default function Account() {
+
+  // const [formData, setFormData] = useState({
+  //   email: "",
+  //   password: ""
+  // })
+
+  // const dispatch = useDispatch()
+
+  // function addUser(user){
+  //     const action = {
+  //       type: 'ADD_USER',
+  //       payload: user
+  //     }
+  //   dispatch(action)
+  // }
+
+  // function log() {
+  //   // e.preventDefault()
+  //   console.log(formData)
+  // }
+
   return (
     <SafeAreaView style={styles.container}>
         <Header2 header2Text={'ACCOUNT'}/>
@@ -17,7 +41,7 @@ export default function Account() {
             <Text style={styles.text}>PASSWORD</Text>
             <Input placeholder="Password"/>
         </View>
-        <MyButtonMain buttonText='LOG IN'/>
+        <MyButtonMain buttonText={'LOG IN'}/>
         <Text style={styles.text}>DON'T HAVE AN ACCOUNT YET?</Text>
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>SIGN UP</Text>

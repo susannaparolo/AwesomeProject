@@ -2,12 +2,9 @@
 import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 
 export default function MyButtonMain(props) { 
-    function randomLog() {
-        console.log("Main Button Log")
-    }
    
     return (
-            <TouchableOpacity style={styles.buttonStyle} onPress={randomLog}>
+            <TouchableOpacity style={styles.buttonStyle}>
                 <Text style={styles.textStyle}>{props.buttonText}</Text>
             </TouchableOpacity>
     );
