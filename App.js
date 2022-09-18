@@ -1,10 +1,12 @@
 import { StyleSheet } from "react-native";
 import BottomNavigator from "./src/components/bottom-navigator";
-// import { createStore } from "redux";
-// import { Provider } from 'react-redux';
+import { Provider } from 'react-redux'
+import { Store } from "./src/redux/store";
 
 
 export default function App() {
+
+
 
   // const initialState = {username: "No user is set yet"}
 
@@ -23,9 +25,9 @@ export default function App() {
   // const store = createStore(userReducer,initialState);
 
   return (
-      // <Provider store={store}>
+      <Provider>
         <BottomNavigator/>
-      {/* </Provider> */}
+      </Provider>
     );
 }
 
